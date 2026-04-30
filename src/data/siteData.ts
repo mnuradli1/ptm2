@@ -11,16 +11,18 @@ export const siteConfig = {
   description:
     "Perusahaan IT Procurement & System Integrator yang melayani sektor pemerintah, BUMN, dan swasta dengan solusi teknologi end-to-end.",
   url: "https://persadatek.com",
-  phone: "+6221-5555-7890",
-  whatsapp: "6281234567890",
-  email: "info@persadatek.com",
+  phone: "+62 822 1318 9904",
+  whatsapp: "6282213189904",
+  email: "office@persadatek.com",
   address: {
-    street: "Jl. Jend. Sudirman Kav. 52-53",
-    city: "Jakarta Selatan",
+    street: "Jl. Tj. Duren Utara 4 No.56A, Tj. Duren Utara",
+    city: "Jakarta Barat",
+    district: "Kec. Grogol Petamburan",
     province: "DKI Jakarta",
-    postalCode: "12190",
+    postalCode: "11470",
     country: "Indonesia",
   },
+  mapsUrl: "https://maps.app.goo.gl/e1At1Wb1e3vV3U3K7",
   socialMedia: {
     linkedin: "https://linkedin.com/company/persadatek",
     instagram: "https://instagram.com/persadatek",
@@ -28,7 +30,7 @@ export const siteConfig = {
   },
   operatingHours: "Senin - Jumat, 08:00 - 17:00 WIB",
   googleMapsEmbed:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2904!2d106.8105!3d-6.2271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTMnMzcuNiJTIDEwNsKwNDgnMzcuOCJF!5e0!3m2!1sid!2sid!4v1600000000000",
+    "https://www.google.com/maps?q=Jl.+Tj.+Duren+Utara+4+No.56A,+Kec.+Grogol+Petamburan,+Jakarta+Barat+11470&output=embed",
 };
 
 // --- Navigation ---
@@ -97,7 +99,7 @@ export const services: Service[] = [
     shortDescription:
       "Pengadaan hardware dan software IT dari vendor resmi dengan harga kompetitif.",
     icon: "ShoppingCart",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
     fullDescription:
       "Layanan pengadaan perangkat IT end-to-end mencakup server, storage, networking, end-user computing, hingga lisensi software enterprise. Terdaftar di e-Katalog LKPP untuk memudahkan proses pengadaan pemerintah.",
     capabilities: [
@@ -340,7 +342,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Modernisasi infrastruktur data center termasuk pengadaan server, storage, dan sistem pendingin berstandar Tier III.",
     services: ["IT Procurement", "System Integration", "Data Center"],
     year: 2025,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Implementasi Network Security",
@@ -350,7 +352,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Implementasi firewall next-gen dan sistem monitoring keamanan jaringan untuk seluruh OPD.",
     services: ["Cybersecurity", "System Integration"],
     year: 2025,
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Pengadaan IT Infrastructure",
@@ -360,7 +362,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Pengadaan dan instalasi perangkat jaringan, server, dan end-user computing untuk mendukung program Smart City.",
     services: ["IT Procurement", "System Integration"],
     year: 2024,
-    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Cloud Migration Enterprise",
@@ -370,7 +372,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Migrasi aplikasi bisnis kritikal ke lingkungan hybrid cloud dengan zero downtime.",
     services: ["Cloud Solutions", "System Integration"],
     year: 2025,
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1494625927555-6ec4433b1571?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Managed Services Data Center",
@@ -380,7 +382,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Pengelolaan infrastruktur data center termasuk monitoring 24/7, maintenance, dan disaster recovery.",
     services: ["Managed Services", "Data Center"],
     year: 2024,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Pengadaan Perangkat Jaringan",
@@ -390,7 +392,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Pengadaan switch, router, dan access point untuk seluruh kantor cabang di wilayah Sumatera.",
     services: ["IT Procurement"],
     year: 2024,
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "IT Master Plan",
@@ -400,7 +402,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Penyusunan IT master plan dan roadmap transformasi digital untuk unit bisnis baru.",
     services: ["IT Consulting"],
     year: 2025,
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Cybersecurity Assessment",

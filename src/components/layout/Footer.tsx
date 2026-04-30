@@ -109,8 +109,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <span>
-                  {siteConfig.address.street}, {siteConfig.address.city},{" "}
-                  {siteConfig.address.province} {siteConfig.address.postalCode}
+                  {siteConfig.address.street}, {siteConfig.address.district}, {siteConfig.address.city}, {siteConfig.address.province} {siteConfig.address.postalCode}
                 </span>
               </li>
               <li className="flex gap-3">

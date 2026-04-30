@@ -46,8 +46,17 @@ export default function KontakPage() {
                     <h3 className="font-semibold text-slate-900 mb-1">Alamat</h3>
                     <p className="text-sm text-slate-600">
                       {siteConfig.address.street}<br />
+                      {siteConfig.address.district}<br />
                       {siteConfig.address.city}, {siteConfig.address.province} {siteConfig.address.postalCode}
                     </p>
+                    <a
+                      href={siteConfig.mapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-primary-500 hover:text-primary-600 mt-1 inline-block"
+                    >
+                      Lihat di Google Maps →
+                    </a>
                   </div>
                 </div>
 
