@@ -297,18 +297,18 @@ export interface Partner {
 }
 
 export const partners: Partner[] = [
-  { name: "Cisco", category: "Networking", level: "Select Partner", color: "#049fd9", logo: "/persadatek/logos/cisco.svg" },
-  { name: "Dell Technologies", category: "Server & Computing", level: "Authorized Partner", color: "#007DB8", logo: "/persadatek/logos/dell.svg" },
-  { name: "HPE", category: "Server & Computing", level: "Silver Partner", color: "#01A982", logo: "/persadatek/logos/hpe.svg" },
-  { name: "Microsoft", category: "Software", level: "Solutions Partner", color: "#00A4EF", logo: "/persadatek/logos/microsoft.svg" },
-  { name: "Lenovo", category: "Server & Computing", level: "Authorized Partner", color: "#E2231A", logo: "/persadatek/logos/lenovo.svg" },
-  { name: "Fortinet", category: "Security", level: "Advanced Partner", color: "#EE3124", logo: "/persadatek/logos/fortinet.svg" },
-  { name: "VMware", category: "Cloud", level: "Partner Connect", color: "#696566", logo: "/persadatek/logos/vmware.svg" },
-  { name: "AWS", category: "Cloud", level: "Select Tier", color: "#FF9900", logo: "/persadatek/logos/aws.svg" },
-  { name: "Palo Alto Networks", category: "Security", level: "Authorized Partner", color: "#FA582D", logo: "/persadatek/logos/paloaltonetworks.svg" },
-  { name: "Juniper Networks", category: "Networking", level: "Authorized Partner", color: "#84B135", logo: "/persadatek/logos/junipernetworks.svg" },
-  { name: "APC by Schneider", category: "Power & Cooling", level: "Elite Partner", color: "#3DCD58", logo: "/persadatek/logos/schneiderelectric.svg" },
-  { name: "Vertiv", category: "Power & Cooling", level: "Authorized Partner", color: "#CF202F", logo: "/persadatek/logos/vertiv.svg" },
+  { name: "Cisco", category: "Networking", level: "Select Partner", color: "#049fd9", logo: "/logos/cisco.svg" },
+  { name: "Dell Technologies", category: "Server & Computing", level: "Authorized Partner", color: "#007DB8", logo: "/logos/dell.svg" },
+  { name: "HPE", category: "Server & Computing", level: "Silver Partner", color: "#01A982", logo: "/logos/hpe.svg" },
+  { name: "Microsoft", category: "Software", level: "Solutions Partner", color: "#00A4EF", logo: "/logos/microsoft.svg" },
+  { name: "Lenovo", category: "Server & Computing", level: "Authorized Partner", color: "#E2231A", logo: "/logos/lenovo.svg" },
+  { name: "Fortinet", category: "Security", level: "Advanced Partner", color: "#EE3124", logo: "/logos/fortinet.svg" },
+  { name: "VMware", category: "Cloud", level: "Partner Connect", color: "#696566", logo: "/logos/vmware.svg" },
+  { name: "AWS", category: "Cloud", level: "Select Tier", color: "#FF9900", logo: "/logos/aws.svg" },
+  { name: "Palo Alto Networks", category: "Security", level: "Authorized Partner", color: "#FA582D", logo: "/logos/paloaltonetworks.svg" },
+  { name: "Juniper Networks", category: "Networking", level: "Authorized Partner", color: "#84B135", logo: "/logos/junipernetworks.svg" },
+  { name: "APC by Schneider", category: "Power & Cooling", level: "Elite Partner", color: "#3DCD58", logo: "/logos/schneiderelectric.svg" },
+  { name: "Vertiv", category: "Power & Cooling", level: "Authorized Partner", color: "#CF202F", logo: "/logos/vertiv.svg" },
 ];
 
 export const partnerCategories = [
