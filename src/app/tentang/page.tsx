@@ -21,17 +21,29 @@ export default function TentangPage() {
       {/* Company Profile */}
       <section className="py-20">
         <Container>
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-slate-900 font-heading mb-6">
-              {companyInfo.legalName}
-            </h2>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              Berdiri sejak {companyInfo.founded}, {companyInfo.legalName} adalah perusahaan
-              IT Procurement dan System Integrator yang berkomitmen menyediakan solusi
-              teknologi informasi terbaik untuk sektor pemerintah, BUMN, dan swasta di Indonesia.
-              Dengan tim profesional bersertifikat dan kemitraan strategis bersama vendor
-              teknologi global, kami siap mendukung transformasi digital organisasi Anda.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80"
+                alt="Kantor PT Persada Teknologi Mandiri"
+                className="rounded-2xl shadow-lg w-full h-auto"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 font-heading mb-6">
+                {companyInfo.legalName}
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-4">
+                Berdiri sejak {companyInfo.founded}, {companyInfo.legalName} adalah perusahaan
+                IT Procurement dan System Integrator yang berkomitmen menyediakan solusi
+                teknologi informasi terbaik untuk sektor pemerintah, BUMN, dan swasta di Indonesia.
+              </p>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Dengan tim profesional bersertifikat dan kemitraan strategis bersama vendor
+                teknologi global, kami siap mendukung transformasi digital organisasi Anda.
+                Kami telah berhasil menyelesaikan lebih dari 150 proyek untuk 80+ klien di seluruh Indonesia.
+              </p>
+            </div>
           </div>
         </Container>
       </section>
@@ -102,11 +114,11 @@ export default function TentangPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {teamMembers.map((member, i) => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">
-                    {member.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
-                  </span>
-                </div>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-20 h-20 rounded-full object-cover mx-auto mb-4"
+                />
                 <h3 className="font-semibold text-slate-900 font-heading">{member.name}</h3>
                 <p className="text-sm text-primary-500 font-medium mb-3">{member.title}</p>
                 <p className="text-sm text-slate-600">{member.bio}</p>

@@ -20,8 +20,13 @@ export default function KarirPage() {
       <section className="py-20">
         <Container>
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-lg text-slate-600 leading-relaxed">
+            <div className="mb-12">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                alt="Tim Persadatek bekerja bersama"
+                className="w-full h-64 object-cover rounded-2xl mb-8"
+              />
+              <p className="text-lg text-slate-600 leading-relaxed text-center">
                 Kami selalu mencari talenta terbaik yang bersemangat dalam teknologi
                 dan ingin memberikan dampak positif. Bergabunglah dengan tim kami
                 dan kembangkan karir Anda bersama Persadatek.

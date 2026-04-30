@@ -9,8 +9,9 @@ export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const service = services.find((s) => s.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
   if (!service) return {};
   return {
     title: service.title,
@@ -18,8 +19,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function LayananDetailPage({ params }: { params: { slug: string } }) {
-  const service = services.find((s) => s.slug === params.slug);
+export default async function LayananDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const service = services.find((s) => s.slug === slug);
   if (!service) notFound();
 
   return (
@@ -36,6 +38,11 @@ export default function LayananDetailPage({ params }: { params: { slug: string }
       <section className="py-20">
         <Container>
           <div className="max-w-4xl mx-auto">
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-full h-64 sm:h-80 object-cover rounded-2xl mb-10"
+            />
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-slate-600 leading-relaxed mb-10">
                 {service.fullDescription}

@@ -85,6 +85,7 @@ export interface Service {
   title: string;
   shortDescription: string;
   icon: string;
+  image: string;
   fullDescription: string;
   capabilities: string[];
 }
@@ -96,6 +97,7 @@ export const services: Service[] = [
     shortDescription:
       "Pengadaan hardware dan software IT dari vendor resmi dengan harga kompetitif.",
     icon: "ShoppingCart",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
     fullDescription:
       "Layanan pengadaan perangkat IT end-to-end mencakup server, storage, networking, end-user computing, hingga lisensi software enterprise. Terdaftar di e-Katalog LKPP untuk memudahkan proses pengadaan pemerintah.",
     capabilities: [
@@ -113,6 +115,7 @@ export const services: Service[] = [
     shortDescription:
       "Desain, implementasi, dan integrasi solusi IT end-to-end untuk bisnis Anda.",
     icon: "Cpu",
+    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80",
     fullDescription:
       "Layanan integrasi sistem yang mencakup desain arsitektur, implementasi, konfigurasi, dan komisioning infrastruktur IT. Kami memastikan seluruh komponen bekerja sebagai satu kesatuan yang optimal.",
     capabilities: [
@@ -130,6 +133,7 @@ export const services: Service[] = [
     shortDescription:
       "Pengelolaan infrastruktur IT berkelanjutan dengan SLA terjamin.",
     icon: "Settings",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     fullDescription:
       "Layanan pengelolaan infrastruktur IT secara berkelanjutan dengan kontrak berbasis SLA. Tim engineer bersertifikat kami memastikan sistem Anda berjalan optimal 24/7.",
     capabilities: [
@@ -147,6 +151,7 @@ export const services: Service[] = [
     shortDescription:
       "Solusi cloud computing untuk transformasi digital yang aman dan skalabel.",
     icon: "Cloud",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     fullDescription:
       "Layanan cloud computing mulai dari assessment, migrasi, hingga pengelolaan lingkungan cloud. Kami membantu organisasi Anda beralih ke cloud dengan aman dan efisien.",
     capabilities: [
@@ -164,6 +169,7 @@ export const services: Service[] = [
     shortDescription:
       "Perlindungan menyeluruh terhadap ancaman siber dan kepatuhan regulasi.",
     icon: "Shield",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
     fullDescription:
       "Solusi keamanan siber end-to-end untuk melindungi aset digital organisasi Anda. Mencakup audit keamanan, implementasi solusi, monitoring, dan kepatuhan terhadap UU PDP.",
     capabilities: [
@@ -181,6 +187,7 @@ export const services: Service[] = [
     shortDescription:
       "Konsultasi strategis untuk perencanaan dan transformasi digital organisasi.",
     icon: "Lightbulb",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
     fullDescription:
       "Layanan konsultasi IT strategis untuk membantu organisasi merencanakan dan melaksanakan transformasi digital. Pendekatan berbasis standar internasional dan best practices.",
     capabilities: [
@@ -200,6 +207,7 @@ export interface Solution {
   title: string;
   shortDescription: string;
   icon: string;
+  image: string;
   fullDescription: string;
   features: string[];
 }
@@ -211,6 +219,7 @@ export const solutions: Solution[] = [
     shortDescription:
       "Solusi teknologi untuk mendukung SPBE dan transformasi digital pemerintah.",
     icon: "Building",
+    image: "https://images.unsplash.com/photo-1555848962-6e79363ec58f?auto=format&fit=crop&w=800&q=80",
     fullDescription:
       "Solusi komprehensif untuk mendukung implementasi Sistem Pemerintahan Berbasis Elektronik (SPBE) dan Pemerintah Digital (Pemdi). Kami membantu instansi pemerintah dalam perencanaan, pengadaan, dan implementasi infrastruktur TIK.",
     features: [
@@ -228,6 +237,7 @@ export const solutions: Solution[] = [
     shortDescription:
       "Infrastruktur IT enterprise untuk mendukung pertumbuhan bisnis.",
     icon: "Briefcase",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
     fullDescription:
       "Solusi infrastruktur IT skala enterprise yang dirancang untuk mendukung operasional bisnis, meningkatkan efisiensi, dan memastikan kelangsungan usaha. Cocok untuk BUMN, perbankan, manufaktur, dan korporasi.",
     features: [
@@ -245,6 +255,7 @@ export const solutions: Solution[] = [
     shortDescription:
       "Desain, pembangunan, dan modernisasi data center berstandar internasional.",
     icon: "Server",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
     fullDescription:
       "Layanan end-to-end untuk data center mulai dari perencanaan, desain, pembangunan, hingga operasional. Mengacu pada standar internasional untuk memastikan keandalan dan efisiensi.",
     features: [
@@ -262,6 +273,7 @@ export const solutions: Solution[] = [
     shortDescription:
       "Solusi jaringan dan keamanan untuk melindungi infrastruktur digital.",
     icon: "Network",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
     fullDescription:
       "Solusi jaringan dan keamanan terintegrasi untuk memastikan konektivitas yang handal dan perlindungan menyeluruh terhadap ancaman siber.",
     features: [
@@ -280,21 +292,23 @@ export interface Partner {
   name: string;
   category: string;
   level: string;
+  color: string;
+  logo: string;
 }
 
 export const partners: Partner[] = [
-  { name: "Cisco", category: "Networking", level: "Select Partner" },
-  { name: "Dell Technologies", category: "Server & Computing", level: "Authorized Partner" },
-  { name: "HPE", category: "Server & Computing", level: "Silver Partner" },
-  { name: "Microsoft", category: "Software", level: "Solutions Partner" },
-  { name: "Lenovo", category: "Server & Computing", level: "Authorized Partner" },
-  { name: "Fortinet", category: "Security", level: "Advanced Partner" },
-  { name: "VMware", category: "Cloud", level: "Partner Connect" },
-  { name: "AWS", category: "Cloud", level: "Select Tier" },
-  { name: "Palo Alto Networks", category: "Security", level: "Authorized Partner" },
-  { name: "Juniper Networks", category: "Networking", level: "Authorized Partner" },
-  { name: "APC by Schneider", category: "Power & Cooling", level: "Elite Partner" },
-  { name: "Vertiv", category: "Power & Cooling", level: "Authorized Partner" },
+  { name: "Cisco", category: "Networking", level: "Select Partner", color: "#049fd9", logo: "/persadatek/logos/cisco.svg" },
+  { name: "Dell Technologies", category: "Server & Computing", level: "Authorized Partner", color: "#007DB8", logo: "/persadatek/logos/dell.svg" },
+  { name: "HPE", category: "Server & Computing", level: "Silver Partner", color: "#01A982", logo: "/persadatek/logos/hpe.svg" },
+  { name: "Microsoft", category: "Software", level: "Solutions Partner", color: "#00A4EF", logo: "/persadatek/logos/microsoft.svg" },
+  { name: "Lenovo", category: "Server & Computing", level: "Authorized Partner", color: "#E2231A", logo: "/persadatek/logos/lenovo.svg" },
+  { name: "Fortinet", category: "Security", level: "Advanced Partner", color: "#EE3124", logo: "/persadatek/logos/fortinet.svg" },
+  { name: "VMware", category: "Cloud", level: "Partner Connect", color: "#696566", logo: "/persadatek/logos/vmware.svg" },
+  { name: "AWS", category: "Cloud", level: "Select Tier", color: "#FF9900", logo: "/persadatek/logos/aws.svg" },
+  { name: "Palo Alto Networks", category: "Security", level: "Authorized Partner", color: "#FA582D", logo: "/persadatek/logos/paloaltonetworks.svg" },
+  { name: "Juniper Networks", category: "Networking", level: "Authorized Partner", color: "#84B135", logo: "/persadatek/logos/junipernetworks.svg" },
+  { name: "APC by Schneider", category: "Power & Cooling", level: "Elite Partner", color: "#3DCD58", logo: "/persadatek/logos/schneiderelectric.svg" },
+  { name: "Vertiv", category: "Power & Cooling", level: "Authorized Partner", color: "#CF202F", logo: "/persadatek/logos/vertiv.svg" },
 ];
 
 export const partnerCategories = [
@@ -314,6 +328,7 @@ export interface PortfolioProject {
   description: string;
   services: string[];
   year: number;
+  image: string;
 }
 
 export const portfolioProjects: PortfolioProject[] = [
@@ -325,6 +340,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Modernisasi infrastruktur data center termasuk pengadaan server, storage, dan sistem pendingin berstandar Tier III.",
     services: ["IT Procurement", "System Integration", "Data Center"],
     year: 2025,
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Implementasi Network Security",
@@ -334,6 +350,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Implementasi firewall next-gen dan sistem monitoring keamanan jaringan untuk seluruh OPD.",
     services: ["Cybersecurity", "System Integration"],
     year: 2025,
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Pengadaan IT Infrastructure",
@@ -343,6 +360,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Pengadaan dan instalasi perangkat jaringan, server, dan end-user computing untuk mendukung program Smart City.",
     services: ["IT Procurement", "System Integration"],
     year: 2024,
+    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Cloud Migration Enterprise",
@@ -352,6 +370,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Migrasi aplikasi bisnis kritikal ke lingkungan hybrid cloud dengan zero downtime.",
     services: ["Cloud Solutions", "System Integration"],
     year: 2025,
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Managed Services Data Center",
@@ -361,6 +380,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Pengelolaan infrastruktur data center termasuk monitoring 24/7, maintenance, dan disaster recovery.",
     services: ["Managed Services", "Data Center"],
     year: 2024,
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Pengadaan Perangkat Jaringan",
@@ -370,6 +390,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Pengadaan switch, router, dan access point untuk seluruh kantor cabang di wilayah Sumatera.",
     services: ["IT Procurement"],
     year: 2024,
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "IT Master Plan",
@@ -379,6 +400,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Penyusunan IT master plan dan roadmap transformasi digital untuk unit bisnis baru.",
     services: ["IT Consulting"],
     year: 2025,
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Cybersecurity Assessment",
@@ -388,6 +410,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Security assessment komprehensif, penetration testing, dan implementasi solusi SIEM.",
     services: ["Cybersecurity"],
     year: 2025,
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Infrastruktur Jaringan Kampus",
@@ -397,6 +420,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Desain dan implementasi infrastruktur jaringan kampus termasuk Wi-Fi 6 untuk 50+ gedung.",
     services: ["System Integration", "IT Procurement"],
     year: 2024,
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Managed IT Services",
@@ -406,6 +430,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Layanan managed IT services termasuk helpdesk, server management, dan backup untuk kantor pusat.",
     services: ["Managed Services"],
     year: 2025,
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Server Virtualization",
@@ -415,6 +440,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Implementasi virtualisasi server dengan VMware untuk konsolidasi 40+ server fisik.",
     services: ["System Integration", "Cloud Solutions"],
     year: 2024,
+    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Endpoint Security Deployment",
@@ -424,6 +450,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Deployment endpoint protection untuk 5.000+ perangkat di seluruh lokasi pabrik dan kantor.",
     services: ["Cybersecurity", "Managed Services"],
     year: 2024,
+    image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=600&q=80",
   },
 ];
 
@@ -491,6 +518,7 @@ export interface TeamMember {
   name: string;
   title: string;
   bio: string;
+  image: string;
 }
 
 export const teamMembers: TeamMember[] = [
@@ -498,26 +526,31 @@ export const teamMembers: TeamMember[] = [
     name: "Ahmad Rizaldi",
     title: "Direktur Utama",
     bio: "Berpengalaman 15+ tahun di industri IT, mantan VP Technology di perusahaan multinasional.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
   },
   {
     name: "Siti Nurhaliza",
     title: "Direktur Operasional",
     bio: "Ahli manajemen proyek IT dengan sertifikasi PMP dan pengalaman mengelola 100+ proyek.",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
   },
   {
     name: "Budi Santoso",
     title: "Direktur Teknis",
     bio: "CCIE dan VCAP certified, spesialis infrastruktur data center dan cloud computing.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
   },
   {
     name: "Diana Putri",
     title: "Head of Sales",
     bio: "10+ tahun pengalaman di penjualan solusi IT enterprise untuk sektor pemerintah dan BUMN.",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
   },
   {
     name: "Reza Pratama",
     title: "Head of Engineering",
     bio: "Memimpin tim 25+ engineer bersertifikat vendor dengan fokus pada implementasi berkualitas tinggi.",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
   },
 ];
 
@@ -565,6 +598,7 @@ export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
+  image: string;
   content: string;
   date: string;
   category: string;
@@ -577,6 +611,7 @@ export const blogPosts: BlogPost[] = [
     title: "10 Tren Teknologi yang Akan Mendominasi 2026",
     excerpt:
       "Dari AI-Augmented Procurement hingga Zero Trust Architecture, inilah tren teknologi yang perlu diperhatikan organisasi di Indonesia.",
+    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
     content: `<p>Tahun 2026 membawa perubahan besar dalam lanskap teknologi di Indonesia. Berikut adalah 10 tren utama yang perlu diperhatikan:</p>
 <h3>1. AI-Augmented Procurement</h3>
 <p>Lebih dari 70% proses transformasi digital akan di-augmentasi AI pada 2026. Dalam pengadaan, AI membantu analisis vendor, prediksi harga, dan otomasi proses approval.</p>
@@ -594,6 +629,7 @@ export const blogPosts: BlogPost[] = [
     title: "Panduan Lengkap Pengadaan IT Pemerintah 2026",
     excerpt:
       "Memahami Perpres 46/2025 dan mekanisme e-Katalog V6 untuk pengadaan IT yang efisien dan sesuai regulasi.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
     content: `<p>Pengadaan IT di sektor pemerintah memiliki regulasi yang terus diperbarui. Artikel ini membahas panduan terkini berdasarkan Perpres 46/2025.</p>
 <h3>Mekanisme Pengadaan</h3>
 <p>Terdapat beberapa metode pengadaan yang dapat digunakan: E-Purchasing via e-Katalog V6, Tender/Seleksi, Penunjukan Langsung, Pengadaan Langsung, dan Tender Cepat.</p>
@@ -609,6 +645,7 @@ export const blogPosts: BlogPost[] = [
     title: "Tantangan Keamanan Siber di Indonesia: Apa yang Perlu Diketahui",
     excerpt:
       "Indonesia mendeteksi 133,4 juta serangan siber di semester pertama 2025. Bagaimana organisasi harus merespons?",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
     content: `<p>Ancaman siber di Indonesia terus meningkat dengan signifikan. Data menunjukkan 133,4 juta serangan siber terdeteksi di semester pertama 2025 saja.</p>
 <h3>Ancaman Utama</h3>
 <p>Ransomware tetap menjadi ancaman terbesar, kini diperkuat oleh AI. Selain itu, phishing, DDoS, dan insider threats juga meningkat.</p>
@@ -624,6 +661,7 @@ export const blogPosts: BlogPost[] = [
     title: "Tips Memilih Cloud Provider yang Tepat untuk Bisnis Anda",
     excerpt:
       "Public cloud, private cloud, atau hybrid? Panduan memilih solusi cloud yang sesuai kebutuhan organisasi.",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
     content: `<p>Migrasi ke cloud bukan lagi pilihan tapi kebutuhan. Namun memilih provider dan model yang tepat memerlukan pertimbangan matang.</p>
 <h3>Public vs Private vs Hybrid</h3>
 <p>Setiap model memiliki kelebihan dan kekurangan. Public cloud cocok untuk startup, private cloud untuk data sensitif, dan hybrid cloud untuk fleksibilitas.</p>
@@ -639,6 +677,7 @@ export const blogPosts: BlogPost[] = [
     title: "RIPDN 2025-2045: Era Baru Pemerintah Digital Indonesia",
     excerpt:
       "Rencana Induk Pemerintah Digital Nasional resmi diluncurkan. Apa dampaknya bagi pengadaan IT?",
+    image: "https://images.unsplash.com/photo-1555848962-6e79363ec58f?auto=format&fit=crop&w=800&q=80",
     content: `<p>Februari 2026, pemerintah meluncurkan Rencana Induk Pemerintah Digital Nasional (RIPDN) 2025-2045 yang menjadi panduan transformasi digital selama 20 tahun ke depan.</p>
 <h3>Transformasi SPBE ke Pemdi</h3>
 <p>Sistem Pemerintahan Berbasis Elektronik (SPBE) bertransformasi menjadi Pemerintah Digital (Pemdi) dengan fokus pada dampak dan kepuasan pengguna.</p>
@@ -654,6 +693,7 @@ export const blogPosts: BlogPost[] = [
     title: "Pentingnya TKDN dalam Pengadaan IT Pemerintah",
     excerpt:
       "Memahami ketentuan TKDN dan dampaknya bagi penyedia dan pembeli produk IT di Indonesia.",
+    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80",
     content: `<p>Tingkat Komponen Dalam Negeri (TKDN) menjadi faktor krusial dalam pengadaan IT pemerintah sejak diberlakukannya regulasi terbaru.</p>
 <h3>Ketentuan TKDN</h3>
 <p>Produk dalam negeri wajib digunakan jika TKDN + BMP minimal 40%. Produk harus memiliki TKDN paling sedikit 25%.</p>

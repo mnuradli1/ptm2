@@ -16,12 +16,14 @@ export default function PartnerLogos() {
               key={partner.name}
               className="flex flex-col items-center justify-center p-6 rounded-xl border border-slate-100 bg-white hover:shadow-md hover:border-primary-100 transition-all group"
             >
-              <div className="w-16 h-16 bg-slate-100 rounded-xl flex items-center justify-center mb-3 group-hover:bg-primary-50 transition-colors">
-                <span className="text-xs font-bold text-slate-500 group-hover:text-primary-500 text-center leading-tight">
-                  {partner.name}
-                </span>
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-3 transition-transform group-hover:scale-110 bg-white p-2">
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <span className="text-xs text-slate-400">{partner.level}</span>
+              <span className="text-xs text-slate-400 text-center">{partner.level}</span>
             </div>
           ))}
         </div>

@@ -47,22 +47,29 @@ export default function ServiceCards() {
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
-            <Card key={service.slug} href={`/layanan/${service.slug}`}>
-              <div className="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center text-primary-500 mb-5">
-                {iconMap[service.icon]}
+            <Card key={service.slug} href={`/layanan/${service.slug}`} className="p-0 overflow-hidden">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center text-primary-500 mb-4">
+                  {iconMap[service.icon]}
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 font-heading mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {service.shortDescription}
+                </p>
+                <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-primary-500">
+                  Selengkapnya
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 font-heading mb-3">
-                {service.title}
-              </h3>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                {service.shortDescription}
-              </p>
-              <span className="inline-flex items-center gap-1 mt-4 text-sm font-medium text-primary-500">
-                Selengkapnya
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
             </Card>
           ))}
         </div>

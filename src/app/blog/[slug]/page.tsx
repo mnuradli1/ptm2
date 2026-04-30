@@ -10,8 +10,9 @@ export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
   return {
     title: post.title,
@@ -19,8 +20,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function BlogDetailPage({ params }: { params: { slug: string } }) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
   const otherPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
@@ -40,11 +42,16 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Article */}
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center gap-3 mb-6">
                 <Badge variant="primary">{post.category}</Badge>
                 <span className="text-sm text-slate-500">{post.date}</span>
                 <span className="text-sm text-slate-500">oleh {post.author}</span>
               </div>
+              <img
+                src={post.image}
+                alt={post.title}
+                className="w-full h-64 sm:h-80 object-cover rounded-2xl mb-8"
+              />
               <div
                 className="prose prose-slate max-w-none prose-headings:font-heading prose-a:text-primary-500"
                 dangerouslySetInnerHTML={{ __html: post.content }}

@@ -42,10 +42,12 @@ export default function PartnerPage() {
                       key={partner.name}
                       className="flex items-center gap-4 p-5 rounded-xl border border-slate-100 bg-white hover:shadow-md hover:border-primary-100 transition-all"
                     >
-                      <div className="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center shrink-0">
-                        <span className="text-xs font-bold text-slate-500 text-center leading-tight">
-                          {partner.name.split(" ")[0]}
-                        </span>
+                      <div className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 bg-slate-50 p-2">
+                        <img
+                          src={partner.logo}
+                          alt={partner.name}
+                          className="w-full h-full object-contain"
+                        />
                       </div>
                       <div>
                         <h3 className="font-semibold text-slate-900">{partner.name}</h3>
