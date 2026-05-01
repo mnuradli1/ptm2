@@ -175,15 +175,16 @@ export default function HeroSection() {
           <div className="hidden lg:block">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=700&q=80"
-                alt="Server room dengan red lighting"
+                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80"
+                alt="Data center dan infrastruktur IT modern"
                 className="rounded-2xl shadow-[0_0_60px_rgba(220,38,38,0.4)] w-full h-auto"
+                style={{ filter: "hue-rotate(150deg) saturate(1.4) contrast(1.1)" }}
               />
               {/* Ember tint overlay on image */}
               <div
-                className="absolute inset-0 rounded-2xl pointer-events-none"
+                className="absolute inset-0 rounded-2xl pointer-events-none mix-blend-multiply"
                 style={{
-                  background: "linear-gradient(135deg, rgba(220,38,38,0.15), rgba(234,88,12,0.1))",
+                  background: "linear-gradient(135deg, rgba(220,38,38,0.35), rgba(234,88,12,0.25))",
                 }}
               />
               <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg">
