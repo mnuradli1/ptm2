@@ -50,7 +50,7 @@ export default function HeroSection() {
 
       {/* Volcanic mountain silhouette */}
       <svg
-        className="absolute bottom-0 left-0 w-full h-40 pointer-events-none"
+        className="absolute bottom-0 left-0 w-full h-28 sm:h-32 pointer-events-none"
         viewBox="0 0 1440 200"
         preserveAspectRatio="none"
         aria-hidden="true"
@@ -62,7 +62,7 @@ export default function HeroSection() {
       </svg>
 
       {/* Animated SVG flames at bottom */}
-      <div className="absolute bottom-0 inset-x-0 h-48 pointer-events-none overflow-hidden">
+      <div className="absolute bottom-0 inset-x-0 h-32 sm:h-36 pointer-events-none overflow-hidden">
         {/* Back flame layer */}
         <svg
           className="absolute bottom-0 inset-x-0 w-full h-full animate-flame-dance"
