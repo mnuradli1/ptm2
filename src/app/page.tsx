@@ -5,6 +5,7 @@ import PartnerLogos from "@/components/sections/PartnerLogos";
 import TestimonialSlider from "@/components/sections/TestimonialSlider";
 import CTASection from "@/components/sections/CTASection";
 import Container from "@/components/ui/Container";
+import EmberDivider from "@/components/ui/EmberDivider";
 import { whyChooseUs } from "@/data/siteData";
 
 export default function HomePage() {
@@ -12,7 +13,9 @@ export default function HomePage() {
     <>
       <HeroSection />
       <ServiceCards />
+      <EmberDivider />
       <StatsCounter />
+      <EmberDivider />
 
       {/* Why Choose Us */}
       <section className="py-20">
@@ -56,7 +59,9 @@ export default function HomePage() {
         </Container>
       </section>
 
+      <EmberDivider />
       <PartnerLogos />
+      <EmberDivider />
       <TestimonialSlider />
       <CTASection />
     </>

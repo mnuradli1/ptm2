@@ -75,6 +75,30 @@ h1, h2, h3, h4, h5, h6 {
   100% { transform: translateY(-80px) scale(0.6); opacity: 0;   }
 }
 
+@keyframes ember-rise-far {
+  0%   { transform: translateY(0)     translateX(0)    scale(1);   opacity: 0.0; }
+  15%  {                                                            opacity: 0.7; }
+  100% { transform: translateY(-300px) translateX(20px) scale(0.4); opacity: 0;   }
+}
+
+@keyframes flame-dance {
+  0%, 100% { transform: scaleY(1)    scaleX(1)    skewX(0deg);   opacity: 0.85; }
+  25%      { transform: scaleY(1.1)  scaleX(0.95) skewX(-2deg);  opacity: 1;    }
+  50%      { transform: scaleY(0.92) scaleX(1.03) skewX(1.5deg); opacity: 0.78; }
+  75%      { transform: scaleY(1.06) scaleX(0.97) skewX(-1deg);  opacity: 0.95; }
+}
+
+@keyframes ignite-flash {
+  0%   { filter: brightness(1)   drop-shadow(0 0 15px rgba(251,191,36,0.6)); }
+  20%  { filter: brightness(2.5) drop-shadow(0 0 60px rgba(251,191,36,1)) drop-shadow(0 0 30px rgba(255,255,255,0.8)); }
+  100% { filter: brightness(1)   drop-shadow(0 0 15px rgba(251,191,36,0.6)); }
+}
+
+@keyframes ember-line-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%      { opacity: 0.85; }
+}
+
 @utility animate-marquee {
   animation: marquee 30s linear infinite;
 }
@@ -93,6 +117,23 @@ h1, h2, h3, h4, h5, h6 {
 
 @utility animate-ember-rise {
   animation: ember-rise 6s ease-out infinite;
+}
+
+@utility animate-ember-rise-far {
+  animation: ember-rise-far 8s ease-out infinite;
+}
+
+@utility animate-flame-dance {
+  animation: flame-dance 2.5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@utility animate-ignite {
+  animation: ignite-flash 1s ease-out;
+}
+
+@utility animate-ember-line {
+  animation: ember-line-pulse 3s ease-in-out infinite;
 }
 
 @utility fire-glow {

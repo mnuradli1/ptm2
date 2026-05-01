@@ -4,8 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { stats } from "@/data/siteData";
 import Container from "@/components/ui/Container";
 
-function AnimatedNumber({ target, suffix }: { target: number; suffix: string }) {
+function AnimatedNumber({ target, suffix, delay }: { target: number; suffix: string; delay: number }) {
   const [count, setCount] = useState(0);
+  const [ignited, setIgnited] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
 
@@ -17,6 +18,11 @@ function AnimatedNumber({ target, suffix }: { target: number; suffix: string }) 
       ([entry]) => {
         if (entry.isIntersecting && !started.current) {
           started.current = true;
+          // Stagger ignite per stat so they go off in sequence
+          setTimeout(() => {
+            setIgnited(true);
+            setTimeout(() => setIgnited(false), 1000);
+          }, delay);
           const duration = 1500;
           const steps = 40;
           const increment = target / steps;
@@ -37,10 +43,10 @@ function AnimatedNumber({ target, suffix }: { target: number; suffix: string }) 
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [target]);
+  }, [target, delay]);
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className={ignited ? "animate-ignite" : ""}>
       {count}
       {suffix}
     </span>
@@ -62,7 +68,7 @@ export default function StatsCounter() {
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
               <div className="text-4xl sm:text-5xl font-bold text-white font-heading drop-shadow-[0_0_15px_rgba(251,191,36,0.6)]">
-                <AnimatedNumber target={stat.value} suffix={stat.suffix} />
+                <AnimatedNumber target={stat.value} suffix={stat.suffix} delay={i * 250} />
               </div>
               <div className="mt-2 text-primary-100 text-sm sm:text-base">
                 {stat.label}
