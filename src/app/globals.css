@@ -1,27 +1,30 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #1e40af;
-  --color-primary-600: #1e3a8a;
-  --color-primary-700: #172554;
-  --color-primary-800: #0f1a3a;
-  --color-primary-900: #0a1128;
+  /* Primary: deep crimson → bright flame */
+  --color-primary-50: #fef2f2;
+  --color-primary-100: #fee2e2;
+  --color-primary-200: #fecaca;
+  --color-primary-300: #fca5a5;
+  --color-primary-400: #f87171;
+  --color-primary-500: #dc2626;
+  --color-primary-600: #b91c1c;
+  --color-primary-700: #7f1d1d;
+  --color-primary-800: #591414;
+  --color-primary-900: #2a0808;
 
-  --color-secondary-50: #ecfdf5;
-  --color-secondary-100: #d1fae5;
-  --color-secondary-200: #a7f3d0;
-  --color-secondary-300: #6ee7b7;
-  --color-secondary-400: #34d399;
-  --color-secondary-500: #059669;
-  --color-secondary-600: #047857;
-  --color-secondary-700: #065f46;
+  /* Secondary: ember orange */
+  --color-secondary-50: #fff7ed;
+  --color-secondary-100: #ffedd5;
+  --color-secondary-200: #fed7aa;
+  --color-secondary-300: #fdba74;
+  --color-secondary-400: #fb923c;
+  --color-secondary-500: #ea580c;
+  --color-secondary-600: #c2410c;
+  --color-secondary-700: #9a3412;
 
-  --color-accent-500: #f59e0b;
+  /* Accent: gold-yellow spark */
+  --color-accent-500: #fbbf24;
 
   --color-whatsapp: #25d366;
 
@@ -29,12 +32,16 @@
   --font-heading: var(--font-plus-jakarta-sans);
 }
 
+html, body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
 body {
-  font-family: var(--font-sans), system-ui, sans-serif;
+  background-color: #fefaf7;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-plus-jakarta-sans), var(--font-inter), system-ui, sans-serif;
 }
 
 @keyframes marquee {
@@ -58,6 +65,43 @@ h1, h2, h3, h4, h5, h6 {
   100% { transform: scale(1.4); opacity: 0; }
 }
 
+@keyframes ember-flicker {
+  0%, 100% { opacity: 0.85; filter: brightness(1); }
+  25%      { opacity: 1;    filter: brightness(1.15); }
+  50%      { opacity: 0.78; filter: brightness(0.95); }
+  75%      { opacity: 0.95; filter: brightness(1.08); }
+}
+
+@keyframes ember-rise {
+  0%   { transform: translateY(0)    scale(1);   opacity: 0.0; }
+  20%  {                                          opacity: 0.6; }
+  100% { transform: translateY(-80px) scale(0.6); opacity: 0;   }
+}
+
+@keyframes ember-rise-far {
+  0%   { transform: translateY(0)     translateX(0)    scale(1);   opacity: 0.0; }
+  15%  {                                                            opacity: 0.7; }
+  100% { transform: translateY(-300px) translateX(20px) scale(0.4); opacity: 0;   }
+}
+
+@keyframes flame-dance {
+  0%, 100% { transform: scaleY(1)    scaleX(1)    skewX(0deg);   opacity: 0.85; }
+  25%      { transform: scaleY(1.1)  scaleX(0.95) skewX(-2deg);  opacity: 1;    }
+  50%      { transform: scaleY(0.92) scaleX(1.03) skewX(1.5deg); opacity: 0.78; }
+  75%      { transform: scaleY(1.06) scaleX(0.97) skewX(-1deg);  opacity: 0.95; }
+}
+
+@keyframes ignite-flash {
+  0%   { filter: brightness(1)   drop-shadow(0 0 15px rgba(251,191,36,0.6)); }
+  20%  { filter: brightness(2.5) drop-shadow(0 0 60px rgba(251,191,36,1)) drop-shadow(0 0 30px rgba(255,255,255,0.8)); }
+  100% { filter: brightness(1)   drop-shadow(0 0 15px rgba(251,191,36,0.6)); }
+}
+
+@keyframes ember-line-pulse {
+  0%, 100% { opacity: 0.4; }
+  50%      { opacity: 0.85; }
+}
+
 @utility animate-marquee {
   animation: marquee 30s linear infinite;
 }
@@ -68,4 +112,35 @@ h1, h2, h3, h4, h5, h6 {
 
 @utility animate-pulse-ring {
   animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@utility animate-ember-flicker {
+  animation: ember-flicker 4s ease-in-out infinite;
+}
+
+@utility animate-ember-rise {
+  animation: ember-rise 6s ease-out infinite;
+}
+
+@utility animate-ember-rise-far {
+  animation: ember-rise-far 8s ease-out infinite;
+}
+
+@utility animate-flame-dance {
+  animation: flame-dance 2.5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@utility animate-ignite {
+  animation: ignite-flash 1s ease-out;
+}
+
+@utility animate-ember-line {
+  animation: ember-line-pulse 3s ease-in-out infinite;
+}
+
+@utility fire-glow {
+  box-shadow:
+    0 0 20px rgba(220, 38, 38, 0.35),
+    0 0 60px rgba(234, 88, 12, 0.25);
 }

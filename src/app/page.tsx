@@ -5,6 +5,8 @@ import PartnerLogos from "@/components/sections/PartnerLogos";
 import TestimonialSlider from "@/components/sections/TestimonialSlider";
 import CTASection from "@/components/sections/CTASection";
 import Container from "@/components/ui/Container";
+import EmberDivider from "@/components/ui/EmberDivider";
+import SectionTitle from "@/components/ui/SectionTitle";
 import { whyChooseUs } from "@/data/siteData";
 
 export default function HomePage() {
@@ -12,19 +14,17 @@ export default function HomePage() {
     <>
       <HeroSection />
       <ServiceCards />
+      <EmberDivider />
       <StatsCounter />
+      <EmberDivider />
 
       {/* Why Choose Us */}
       <section className="py-20">
         <Container>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl font-heading">
-              Mengapa Memilih Persadatek?
-            </h2>
-            <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
-              Keunggulan kami sebagai mitra teknologi informasi terpercaya
-            </p>
-          </div>
+          <SectionTitle
+            title="Mengapa Memilih Persadatek?"
+            subtitle="Keunggulan kami sebagai mitra teknologi informasi terpercaya"
+          />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyChooseUs.map((item, i) => (
               <div
@@ -56,7 +56,9 @@ export default function HomePage() {
         </Container>
       </section>
 
+      <EmberDivider />
       <PartnerLogos />
+      <EmberDivider />
       <TestimonialSlider />
       <CTASection />
     </>

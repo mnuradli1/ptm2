@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:preview": "NEXT_BASE_PATH=/persadatek2 next build",
     "start": "next start",
     "lint": "eslint"
   },

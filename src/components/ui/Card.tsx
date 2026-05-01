@@ -11,8 +11,8 @@ export default function Card({
   href?: string;
 }) {
   const classes = cn(
-    "rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-200",
-    href && "hover:shadow-lg hover:border-primary-200 hover:-translate-y-1",
+    "rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300",
+    href && "hover:shadow-[0_0_30px_rgba(234,88,12,0.25)] hover:border-primary-300 hover:-translate-y-1",
     className
   );
 

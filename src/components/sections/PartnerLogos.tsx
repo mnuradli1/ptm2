@@ -14,7 +14,7 @@ export default function PartnerLogos() {
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="flex flex-col items-center justify-center p-6 rounded-xl border border-slate-100 bg-white hover:shadow-md hover:border-primary-100 transition-all group"
+              className="flex flex-col items-center justify-center p-6 rounded-xl border border-slate-100 bg-white hover:bg-orange-50/50 hover:border-primary-300 hover:shadow-[0_0_25px_rgba(234,88,12,0.2)] transition-all duration-300 group"
             >
               <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-3 transition-transform group-hover:scale-110 bg-white p-2">
                 <img

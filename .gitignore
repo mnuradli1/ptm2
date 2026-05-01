@@ -41,3 +41,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .gstack/
+
+# project-specific reference files (not part of source)
+update/
+riset-*.md

@@ -2,17 +2,147 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/data/siteData";
 
+const particles = [
+  { left: "5%",  delay: "0s",   size: 4,  far: false },
+  { left: "10%", delay: "2.3s", size: 8,  far: true  },
+  { left: "16%", delay: "1.1s", size: 5,  far: false },
+  { left: "22%", delay: "3.4s", size: 10, far: false },
+  { left: "28%", delay: "0.5s", size: 6,  far: true  },
+  { left: "34%", delay: "4.2s", size: 4,  far: false },
+  { left: "39%", delay: "1.8s", size: 12, far: false },
+  { left: "45%", delay: "5.1s", size: 7,  far: true  },
+  { left: "50%", delay: "2.6s", size: 5,  far: false },
+  { left: "56%", delay: "0.9s", size: 9,  far: false },
+  { left: "62%", delay: "3.7s", size: 6,  far: true  },
+  { left: "67%", delay: "1.4s", size: 11, far: false },
+  { left: "73%", delay: "4.8s", size: 4,  far: false },
+  { left: "78%", delay: "2.0s", size: 8,  far: true  },
+  { left: "83%", delay: "0.3s", size: 5,  far: false },
+  { left: "88%", delay: "3.2s", size: 10, far: false },
+  { left: "93%", delay: "1.6s", size: 6,  far: true  },
+  { left: "97%", delay: "4.5s", size: 7,  far: false },
+];
+
 export default function HeroSection() {
   const waUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
     "Halo Persadatek, saya ingin konsultasi mengenai solusi IT."
   )}`;
 
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500 rounded-full blur-3xl" />
+    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-primary-900 via-primary-800 to-primary-600 overflow-hidden">
+      {/* Ember radial glow */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at 20% 110%, rgba(234,88,12,0.55) 0%, transparent 55%), radial-gradient(ellipse at 80% 100%, rgba(251,191,36,0.25) 0%, transparent 50%)",
+        }}
+      />
+
+      {/* Flickering ember blobs */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500 rounded-full blur-3xl animate-ember-flicker" />
+        <div
+          className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-500 rounded-full blur-3xl animate-ember-flicker"
+          style={{ animationDelay: "1.2s" }}
+        />
+      </div>
+
+      {/* Volcanic mountain silhouette */}
+      <svg
+        className="absolute bottom-0 left-0 w-full h-28 sm:h-32 pointer-events-none"
+        viewBox="0 0 1440 200"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M0,200 L0,150 L120,90 L200,130 L320,60 L420,110 L540,40 L660,100 L780,30 L900,80 L1020,50 L1140,110 L1260,70 L1380,120 L1440,90 L1440,200 Z"
+          fill="rgba(20, 4, 4, 0.85)"
+        />
+      </svg>
+
+      {/* Animated SVG flames at bottom */}
+      <div className="absolute bottom-0 inset-x-0 h-32 sm:h-36 pointer-events-none overflow-hidden">
+        {/* Back flame layer */}
+        <svg
+          className="absolute bottom-0 inset-x-0 w-full h-full animate-flame-dance"
+          style={{ animationDelay: "0s" }}
+          viewBox="0 0 1440 200"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <defs>
+            <linearGradient id="flameBack" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%"  stopColor="rgba(220, 38, 38, 0.85)" />
+              <stop offset="50%" stopColor="rgba(234, 88, 12, 0.55)" />
+              <stop offset="100%" stopColor="rgba(251, 191, 36, 0)" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,200 Q60,120 120,150 T240,130 Q300,80 360,140 T480,120 Q540,70 600,130 T720,110 Q780,60 840,125 T960,115 Q1020,75 1080,135 T1200,120 Q1260,80 1320,140 T1440,135 L1440,200 Z"
+            fill="url(#flameBack)"
+          />
+        </svg>
+
+        {/* Mid flame layer */}
+        <svg
+          className="absolute bottom-0 inset-x-0 w-full h-[85%] animate-flame-dance"
+          style={{ animationDelay: "0.6s" }}
+          viewBox="0 0 1440 200"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <defs>
+            <linearGradient id="flameMid" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%"  stopColor="rgba(234, 88, 12, 0.95)" />
+              <stop offset="60%" stopColor="rgba(251, 146, 60, 0.6)" />
+              <stop offset="100%" stopColor="rgba(254, 215, 170, 0)" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,200 Q40,140 90,160 T180,140 Q240,90 300,150 T420,130 Q480,80 540,145 T660,125 Q720,75 780,140 T900,120 Q960,80 1020,145 T1140,130 Q1200,85 1260,150 T1380,140 L1440,150 L1440,200 Z"
+            fill="url(#flameMid)"
+          />
+        </svg>
+
+        {/* Front flame layer (brightest) */}
+        <svg
+          className="absolute bottom-0 inset-x-0 w-full h-[60%] animate-flame-dance"
+          style={{ animationDelay: "1.2s" }}
+          viewBox="0 0 1440 200"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <defs>
+            <linearGradient id="flameFront" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%"   stopColor="rgba(251, 191, 36, 1)" />
+              <stop offset="50%"  stopColor="rgba(254, 215, 170, 0.7)" />
+              <stop offset="100%" stopColor="rgba(255, 255, 255, 0)" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,200 Q70,170 140,180 T280,170 Q340,140 400,175 T540,165 Q600,135 660,175 T800,165 Q860,140 920,175 T1060,170 Q1120,140 1180,175 T1320,170 Q1380,150 1440,175 L1440,200 Z"
+            fill="url(#flameFront)"
+          />
+        </svg>
+      </div>
+
+      {/* Rising ember particles (dense field) */}
+      <div className="absolute inset-x-0 bottom-0 h-full pointer-events-none">
+        {particles.map((e, i) => (
+          <div
+            key={i}
+            className={`absolute bottom-0 rounded-full bg-secondary-400 blur-sm ${
+              e.far ? "animate-ember-rise-far" : "animate-ember-rise"
+            }`}
+            style={{
+              left: e.left,
+              width: `${e.size}px`,
+              height: `${e.size}px`,
+              animationDelay: e.delay,
+            }}
+          />
+        ))}
       </div>
 
       <Container className="relative z-10 py-20">
@@ -21,8 +151,10 @@ export default function HeroSection() {
             <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-sm text-primary-100 mb-6 border border-white/10">
               IT Procurement & System Integrator
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white font-heading leading-tight">
-              {siteConfig.tagline}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading leading-tight">
+              <span className="bg-gradient-to-r from-amber-200 via-orange-300 to-red-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(251,191,36,0.4)]">
+                {siteConfig.tagline}
+              </span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-primary-100 leading-relaxed">
               Solusi teknologi informasi end-to-end untuk sektor pemerintah, BUMN, dan swasta.
@@ -45,7 +177,15 @@ export default function HeroSection() {
               <img
                 src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&q=80"
                 alt="Data center dan infrastruktur IT modern"
-                className="rounded-2xl shadow-2xl w-full h-auto"
+                className="rounded-2xl shadow-[0_0_60px_rgba(220,38,38,0.4)] w-full h-auto"
+                style={{ filter: "hue-rotate(150deg) saturate(1.4) contrast(1.1)" }}
+              />
+              {/* Ember tint overlay on image */}
+              <div
+                className="absolute inset-0 rounded-2xl pointer-events-none mix-blend-multiply"
+                style={{
+                  background: "linear-gradient(135deg, rgba(220,38,38,0.35), rgba(234,88,12,0.25))",
+                }}
               />
               <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg">
                 <div className="flex items-center gap-3">
