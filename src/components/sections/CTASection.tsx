@@ -8,8 +8,15 @@ export default function CTASection() {
   )}`;
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary-700 to-primary-900">
-      <Container>
+    <section className="relative py-20 bg-gradient-to-br from-primary-700 to-primary-900 overflow-hidden">
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at 30% 100%, rgba(234,88,12,0.45) 0%, transparent 55%), radial-gradient(ellipse at 70% 0%, rgba(251,191,36,0.18) 0%, transparent 50%)",
+        }}
+      />
+      <Container className="relative z-10">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-white font-heading">
             Siap Memulai Transformasi Digital?
