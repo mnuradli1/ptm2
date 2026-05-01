@@ -1,6 +1,7 @@
 import { partners } from "@/data/siteData";
 import Container from "@/components/ui/Container";
 import SectionTitle from "@/components/ui/SectionTitle";
+import { asset } from "@/lib/asset";
 
 export default function PartnerLogos() {
   return (
@@ -18,7 +19,7 @@ export default function PartnerLogos() {
             >
               <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-3 transition-transform group-hover:scale-110 bg-white p-2">
                 <img
-                  src={partner.logo}
+                  src={asset(partner.logo)}
                   alt={partner.name}
                   className="w-full h-full object-contain"
                 />

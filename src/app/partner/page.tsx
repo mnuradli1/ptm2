@@ -3,6 +3,7 @@ import PageHeader from "@/components/sections/PageHeader";
 import CTASection from "@/components/sections/CTASection";
 import Container from "@/components/ui/Container";
 import { partners, partnerCategories } from "@/data/siteData";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Partner",
@@ -44,7 +45,7 @@ export default function PartnerPage() {
                     >
                       <div className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 bg-slate-50 p-2">
                         <img
-                          src={partner.logo}
+                          src={asset(partner.logo)}
                           alt={partner.name}
                           className="w-full h-full object-contain"
                         />

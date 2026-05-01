@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { asset } from "@/lib/asset";
 import { navigationItems, siteConfig } from "@/data/siteData";
 import Container from "@/components/ui/Container";
 
@@ -48,11 +49,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
             <Image
-              src="/logo-ptm.png"
+              src={asset("/logo-ptm.png")}
               alt={siteConfig.companyName}
               width={64}
               height={64}
-              className="drop-shadow-[0_0_8px_rgba(220,38,38,0.45)]"
               priority
             />
             <span className="font-heading text-xl font-bold text-primary-700 hidden sm:block">

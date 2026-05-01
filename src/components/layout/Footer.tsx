@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig, services } from "@/data/siteData";
 import Container from "@/components/ui/Container";
+import { asset } from "@/lib/asset";
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Image
-                src="/logo-ptm.png"
+                src={asset("/logo-ptm.png")}
                 alt={siteConfig.companyName}
                 width={72}
                 height={72}
