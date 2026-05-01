@@ -46,15 +46,18 @@ export default function Navbar() {
       <Container>
         <nav className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0">
+          <Link href="/" className="flex items-center gap-3 shrink-0">
             <Image
               src="/logo-ptm.png"
               alt={siteConfig.companyName}
-              width={48}
-              height={48}
+              width={44}
+              height={44}
               className="rounded-lg"
               priority
             />
+            <span className="font-heading text-xl font-bold text-primary-700 hidden sm:block">
+              {siteConfig.shortName}
+            </span>
           </Link>
 
           {/* Desktop Nav */}

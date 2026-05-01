@@ -10,14 +10,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company */}
           <div>
-            <div className="flex items-center mb-4">
+            <div className="flex items-center gap-3 mb-4">
               <Image
                 src="/logo-ptm.png"
                 alt={siteConfig.companyName}
-                width={56}
-                height={56}
-                className="rounded-lg"
+                width={52}
+                height={52}
+                className="rounded-lg ring-1 ring-white/10"
               />
+              <span className="font-heading text-xl font-bold">
+                {siteConfig.shortName}
+              </span>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed mb-6">
               {siteConfig.description}
