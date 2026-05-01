@@ -26,14 +26,39 @@ export default function HeroSection() {
         />
       </div>
 
+      {/* Rising ember particles */}
+      <div className="absolute inset-x-0 bottom-0 h-full pointer-events-none">
+        {[
+          { left: "12%", delay: "0s",   size: 8 },
+          { left: "28%", delay: "1.4s", size: 5 },
+          { left: "45%", delay: "2.8s", size: 10 },
+          { left: "62%", delay: "0.7s", size: 6 },
+          { left: "78%", delay: "3.5s", size: 7 },
+          { left: "88%", delay: "2.1s", size: 9 },
+        ].map((e, i) => (
+          <div
+            key={i}
+            className="absolute bottom-0 rounded-full bg-secondary-400 blur-sm animate-ember-rise"
+            style={{
+              left: e.left,
+              width: `${e.size}px`,
+              height: `${e.size}px`,
+              animationDelay: e.delay,
+            }}
+          />
+        ))}
+      </div>
+
       <Container className="relative z-10 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm rounded-full text-sm text-primary-100 mb-6 border border-white/10">
               IT Procurement & System Integrator
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white font-heading leading-tight">
-              {siteConfig.tagline}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading leading-tight">
+              <span className="bg-gradient-to-r from-amber-200 via-orange-300 to-red-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(251,191,36,0.4)]">
+                {siteConfig.tagline}
+              </span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-primary-100 leading-relaxed">
               Solusi teknologi informasi end-to-end untuk sektor pemerintah, BUMN, dan swasta.

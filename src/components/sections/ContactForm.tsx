@@ -38,7 +38,7 @@ export default function ContactForm() {
             type="text"
             id="name"
             required
-            className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all text-sm"
+            className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-secondary-500 focus:ring-2 focus:ring-secondary-500/40 focus:shadow-[0_0_15px_rgba(234,88,12,0.2)] outline-none transition-all text-sm"
             placeholder="Nama Anda"
           />
         </div>
@@ -50,7 +50,7 @@ export default function ContactForm() {
             type="email"
             id="email"
             required
-            className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all text-sm"
+            className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-secondary-500 focus:ring-2 focus:ring-secondary-500/40 focus:shadow-[0_0_15px_rgba(234,88,12,0.2)] outline-none transition-all text-sm"
             placeholder="email@perusahaan.com"
           />
         </div>
@@ -63,7 +63,7 @@ export default function ContactForm() {
           <input
             type="text"
             id="company"
-            className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all text-sm"
+            className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-secondary-500 focus:ring-2 focus:ring-secondary-500/40 focus:shadow-[0_0_15px_rgba(234,88,12,0.2)] outline-none transition-all text-sm"
             placeholder="Nama perusahaan"
           />
         </div>
@@ -74,7 +74,7 @@ export default function ContactForm() {
           <input
             type="tel"
             id="phone"
-            className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all text-sm"
+            className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-secondary-500 focus:ring-2 focus:ring-secondary-500/40 focus:shadow-[0_0_15px_rgba(234,88,12,0.2)] outline-none transition-all text-sm"
             placeholder="08XX-XXXX-XXXX"
           />
         </div>
@@ -86,7 +86,7 @@ export default function ContactForm() {
         <select
           id="subject"
           required
-          className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all text-sm"
+          className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-secondary-500 focus:ring-2 focus:ring-secondary-500/40 focus:shadow-[0_0_15px_rgba(234,88,12,0.2)] outline-none transition-all text-sm"
         >
           <option value="">Pilih subjek</option>
           <option value="procurement">Pengadaan IT</option>
@@ -107,7 +107,7 @@ export default function ContactForm() {
           id="message"
           required
           rows={5}
-          className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all text-sm resize-none"
+          className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-secondary-500 focus:ring-2 focus:ring-secondary-500/40 focus:shadow-[0_0_15px_rgba(234,88,12,0.2)] outline-none transition-all text-sm resize-none"
           placeholder="Ceritakan kebutuhan IT Anda..."
         />
       </div>

@@ -16,7 +16,7 @@ export default function TestimonialSlider() {
   }, []);
 
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-gradient-to-b from-orange-50/30 via-white to-orange-50/30">
       <Container>
         <SectionTitle
           title="Testimoni Klien"
@@ -35,7 +35,7 @@ export default function TestimonialSlider() {
               >
                 <div className="bg-white rounded-2xl p-8 sm:p-10 shadow-sm text-center">
                   <svg
-                    className="w-10 h-10 text-primary-200 mx-auto mb-6"
+                    className="w-10 h-10 text-secondary-300 mx-auto mb-6"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -61,10 +61,10 @@ export default function TestimonialSlider() {
               <button
                 key={i}
                 onClick={() => setCurrent(i)}
-                className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
+                className={`h-2.5 rounded-full transition-all cursor-pointer ${
                   i === current
-                    ? "bg-primary-500 w-8"
-                    : "bg-slate-300 hover:bg-slate-400"
+                    ? "w-8 bg-gradient-to-r from-primary-500 to-secondary-500 shadow-[0_0_10px_rgba(234,88,12,0.5)]"
+                    : "w-2.5 bg-slate-300 hover:bg-slate-400"
                 }`}
                 aria-label={`Testimonial ${i + 1}`}
               />

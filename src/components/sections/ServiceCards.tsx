@@ -39,14 +39,14 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function ServiceCards() {
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-20 bg-gradient-to-b from-orange-50/40 via-white to-orange-50/30">
       <Container>
         <SectionTitle
           title="Layanan Kami"
           subtitle="Solusi teknologi informasi end-to-end untuk mendukung transformasi digital organisasi Anda"
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
+          {services.map((service, idx) => (
             <Card key={service.slug} href={`/layanan/${service.slug}`} className="p-0 overflow-hidden">
               <img
                 src={service.image}
@@ -54,7 +54,10 @@ export default function ServiceCards() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center text-primary-500 mb-4">
+                <div
+                  className="w-12 h-12 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl flex items-center justify-center text-primary-500 mb-4 animate-ember-flicker"
+                  style={{ animationDelay: `${idx * 0.4}s` }}
+                >
                   {iconMap[service.icon]}
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 font-heading mb-3">

@@ -52,6 +52,7 @@ export default function Navbar() {
               alt={siteConfig.companyName}
               width={64}
               height={64}
+              className="drop-shadow-[0_0_8px_rgba(220,38,38,0.45)]"
               priority
             />
             <span className="font-heading text-xl font-bold text-primary-700 hidden sm:block">
