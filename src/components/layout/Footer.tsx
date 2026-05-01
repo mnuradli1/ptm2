@@ -14,8 +14,8 @@ export default function Footer() {
               <Image
                 src="/logo-ptm.png"
                 alt={siteConfig.companyName}
-                width={52}
-                height={52}
+                width={72}
+                height={72}
                 className="invert"
               />
               <span className="font-heading text-xl font-bold">
