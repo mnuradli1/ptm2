@@ -50,9 +50,8 @@ export default function Navbar() {
             <Image
               src="/logo-ptm.png"
               alt={siteConfig.companyName}
-              width={44}
-              height={44}
-              className="rounded-lg"
+              width={48}
+              height={48}
               priority
             />
             <span className="font-heading text-xl font-bold text-primary-700 hidden sm:block">

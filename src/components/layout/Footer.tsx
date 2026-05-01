@@ -16,7 +16,7 @@ export default function Footer() {
                 alt={siteConfig.companyName}
                 width={52}
                 height={52}
-                className="rounded-lg ring-1 ring-white/10"
+                className="invert"
               />
               <span className="font-heading text-xl font-bold">
                 {siteConfig.shortName}
