@@ -46,7 +46,7 @@ export default function Navbar() {
       <Container>
         <nav className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0">
+          <Link href="/" className="flex items-center gap-3 shrink-0">
             <Image
               src="/logo-ptm.png"
               alt={siteConfig.companyName}
@@ -54,6 +54,9 @@ export default function Navbar() {
               height={64}
               priority
             />
+            <span className="font-heading text-xl font-bold text-primary-700 hidden sm:block">
+              {siteConfig.shortName}
+            </span>
           </Link>
 
           {/* Desktop Nav */}
@@ -68,7 +71,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "px-3 py-2 text-sm font-medium rounded-lg transition-colors inline-flex items-center gap-1",
+                    "px-2 py-2 text-sm font-medium rounded-lg transition-colors inline-flex items-center gap-1",
                     isActive(item.href)
                       ? "text-primary-500"
                       : "text-slate-700 hover:text-primary-500"
