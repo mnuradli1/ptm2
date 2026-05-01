@@ -835,17 +835,21 @@ export const whyChooseUs = [
   {
     title: "Solusi End-to-End",
     description: "Dari konsultasi, pengadaan, implementasi, hingga pemeliharaan dalam satu mitra.",
+    icon: "cycle",
   },
   {
     title: "Terdaftar di LKPP",
     description: "Terdaftar resmi di LKPP, LPSE, dan e-Katalog V6 untuk pengadaan pemerintah.",
+    icon: "shield-check",
   },
   {
     title: "Partner Vendor Resmi",
     description: "Authorized partner dari Cisco, Dell, HPE, Microsoft, dan vendor global lainnya.",
+    icon: "handshake",
   },
   {
     title: "Dukungan 24/7",
     description: "Tim support bersertifikat siap membantu 24 jam sehari, 7 hari seminggu.",
+    icon: "clock",
   },
 ];
