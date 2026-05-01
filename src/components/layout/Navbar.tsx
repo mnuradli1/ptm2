@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { navigationItems, siteConfig } from "@/data/siteData";
@@ -45,13 +46,15 @@ export default function Navbar() {
       <Container>
         <nav className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">P</span>
-            </div>
-            <span className="font-heading text-xl font-bold text-primary-700">
-              {siteConfig.shortName}
-            </span>
+          <Link href="/" className="flex items-center shrink-0">
+            <Image
+              src="/logo-ptm.png"
+              alt={siteConfig.companyName}
+              width={48}
+              height={48}
+              className="rounded-lg"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}

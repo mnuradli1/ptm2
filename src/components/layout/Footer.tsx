@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig, services } from "@/data/siteData";
 import Container from "@/components/ui/Container";
 
@@ -9,13 +10,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-primary-700 font-bold text-sm">P</span>
-              </div>
-              <span className="font-heading text-xl font-bold">
-                {siteConfig.shortName}
-              </span>
+            <div className="flex items-center mb-4">
+              <Image
+                src="/logo-ptm.png"
+                alt={siteConfig.companyName}
+                width={56}
+                height={56}
+                className="rounded-lg"
+              />
             </div>
             <p className="text-slate-300 text-sm leading-relaxed mb-6">
               {siteConfig.description}
